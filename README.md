@@ -113,9 +113,33 @@ Python · Tkinter · hashlib · SentenceTransformers · shutil
 
 - Some guidance for Tkinter UI improvements and AI summary integration was taken from online tutorials and AI assistants.
 
+## Additional Information & Citations
 
-##  Author
+**Project Ownership**: Core logic (file sync, GUI, AI summarization) was implemented by our team during HackPSU Fall 2025. We consulted ChatGPT and official documentation for guidance, debugging, and design improvements; all code was finalized and tested by us.
 
-Name: Aadithya Chandramouli  
+References:
+
+Python documentation: tkinter, hashlib, shutil
+
+SentenceTransformers library for AI summarization
+
+ChatGPT for guidance on threading, GUI handling, and log summarization
+
+Open Source Packages:
+
+hashlib – file hashing
+
+shutil – file copy/sync
+
+tkinter – GUI
+
+sentence-transformers – AI summarization
+
+---
+
+##  Authors
+
+Name: Aadithya Chandramouli 
+Teamates : Manmeet Singh Kukreja & Umang Virmani
 Hackathon: HackPSU 2025  
 Project: SyncMate — File Synchronization Tool  
