@@ -39,7 +39,6 @@ def start_sync():
                     file.write(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {err_msg}\n")
                 log_text.insert(tk.END,err_msg + "\n")
             time.sleep(5)
-
     # This line creates a new sync process by creating a new thread
     threading.Thread(target=sync_loop,daemon=True).start()
 
@@ -49,14 +48,12 @@ def stop_sync():
     flag = False
     log_text.insert(tk.END,"Sync stopped\n")
     log_text.see(tk.END)
-
 # This function allows the user to select a source folder to be synced
 def browse_source():
     folder = filedialog.askdirectory()
     if folder:
         source_entry.delete(0,tk.END)
         source_entry.insert(0,folder)
-
 # This function allows the user to select a destination folder where the source folder files would be synced to
 def browse_destination():
     folder = filedialog.askdirectory()
@@ -68,17 +65,18 @@ def browse_destination():
 root = tk.Tk()
 root.title("SyncMate — File Synchronizer")
 root.geometry("700x500")
-tk.Label(root,text="Source Folder:").pack(pady=(10,0))
+root.configure(bg = "0073E6")
+tk.Label(root,text="Source Folder:",bg="0073E6",fg="EB489").pack(pady=(10,0))
 source_entry = tk.Entry(root,width=100)
 source_entry.pack()
 ttk.Button(root,text="Browse",command=browse_source).pack(pady=5)
-tk.Label(root,text="Destination Folder:").pack(pady=(10,0))
+tk.Label(root,text="Destination Folder:",bg="008000",fg="EB489").pack(pady=(10,0))
 destination_entry = tk.Entry(root,width=60)
 destination_entry.pack()
 ttk.Button(root,text="Browse",command=browse_destination).pack(pady=5)
 ttk.Button(root,text="Start Sync",command=start_sync).pack(pady=10)
 ttk.Button(root,text="Stop Sync",command=stop_sync).pack(pady=5)
-log_text = scrolledtext.ScrolledText(root,width=75,height=15)
+log_text = scrolledtext.ScrolledText(root,width=75,height=15,bg="000000",fg="FFFF00",insertbackground="EB489")
 log_text.pack(pady=10)
 
 root.mainloop()
