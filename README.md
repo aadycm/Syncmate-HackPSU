@@ -96,14 +96,14 @@ For this project i used a pre-prepared file synchronization template (SyncMate.p
 
 ---
 
-## 💬 Inspiration
+##  Inspiration
 
 I wanted to create a project that bridges systems programming and AI, while remaining practical and understandable.  
 SyncMate reflects my interest in building tools that automate repetitive tasks and make everyday computing simpler.
 
 ---
 
-## 🏆 Built With
+##  Built With
 
 Python · Tkinter · hashlib · SentenceTransformers · shutil  
 
@@ -114,7 +114,7 @@ Python · Tkinter · hashlib · SentenceTransformers · shutil
 - Some guidance for Tkinter UI improvements and AI summary integration was taken from online tutorials and AI assistants.
 
 
-## 👨‍💻 Author
+##  Author
 
 Name: Aadithya Chandramouli  
 Hackathon: HackPSU 2025  
