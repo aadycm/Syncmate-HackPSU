@@ -112,6 +112,8 @@ Python · Tkinter · hashlib · SentenceTransformers · shutil
 ## Notes / Acknowledgements
 
 - Some guidance for Tkinter UI improvements and AI summary integration was taken from online tutorials and AI assistants.
+  
+---
 
 ## Additional Information & Citations
 
