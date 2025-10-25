@@ -117,7 +117,7 @@ Python · Tkinter · hashlib · SentenceTransformers · shutil
 
 **Project Ownership**: Core logic (file sync, GUI, AI summarization) was implemented by our team during HackPSU Fall 2025. We consulted ChatGPT and official documentation for guidance, debugging, and design improvements; all code was finalized and tested by us.
 
-References:
+**References**:
 
 Python documentation: tkinter, hashlib, shutil
 
@@ -125,7 +125,7 @@ SentenceTransformers library for AI summarization
 
 ChatGPT for guidance on threading, GUI handling, and log summarization
 
-Open Source Packages:
+**Open Source Packages**:
 
 hashlib – file hashing
 
