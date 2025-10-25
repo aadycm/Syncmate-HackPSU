@@ -65,7 +65,6 @@ def browse_destination():
 root = tk.Tk()
 root.title("SyncMate — File Synchronizer")
 root.geometry("700x500")
-root.configure(bg="#f5fffa")
 tk.Label(root,text="Source Folder:").pack(pady=(10,0))
 source_entry = tk.Entry(root,width=65)
 source_entry.pack()
