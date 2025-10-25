@@ -25,3 +25,17 @@ def analyze_sync_report(report_filename="sync_log.txt"):
         if "New:" in line and "|" in line:
             total_sync_runs += 1
             try:
+                summary_data = line.split("|", 1)[1]
+                parts = summary_data.split(",")
+                totals["Copied"] += int(parts[0].split(":")[1])
+                totals["Updated"] += int(parts[1].split(":")[1])
+                totals["Skipped"] += int(parts[2].split(":")[1])
+                totals["Errors"] += int(parts[3].split(":")[1])
+
+            except Exception as e:
+                print(f"**Warning:** Could not parse a summary line due to format irregularity (ignoring entry). Details: {e}")
+                continue
+
+    if not totals and total_sync_runs == 0:
+        print("\n**Report Analysis:** No completed synchronization run summaries were successfully parsed from the log.")
+        return
