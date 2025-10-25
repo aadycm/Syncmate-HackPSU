@@ -13,17 +13,14 @@ def start_sync():
     flag = True
     source = source_entry.get().strip()
     destination = destination_entry.get().strip()
-
     # If condition to check if source file does not exist then print an error statement
     if not os.path.exists(source):
         messagebox.showerror("Error, Source folder does not exist")
         return
-
     # If the file exists, make a destination directory
     os.makedirs(destination,exist_ok=True)
-    log_text.insert(tk.END, f"Starting sync from {source} to {destination}\n")
+    log_text.insert(tk.END,f"Starting sync from {source} to {destination}\n")
     log_text.see(tk.END)
-
     # This function starts syncing files from source to destination
     def sync_loop():
         # While loop to keep the sync running until user clicks stop sync
@@ -31,7 +28,6 @@ def start_sync():
             # Try and except block to handle any unexpected errors
             try:
                 summary = SyncMate.sync_folders(source,destination)
-
                 # Opens the sync log.txt to append mode to append the current log into the file
                 with open("sync_log.txt", "a") as file:
                     file.write(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {summary}\n")
@@ -72,8 +68,8 @@ def browse_destination():
 root = tk.Tk()
 root.title("SyncMate — File Synchronizer")
 root.geometry("700x500")
-tk.Label(root,text="Source Folder:").pack(pady=(10, 0))
-source_entry = tk.Entry(root,width=60)
+tk.Label(root,text="Source Folder:").pack(pady=(10,0))
+source_entry = tk.Entry(root,width=100)
 source_entry.pack()
 ttk.Button(root,text="Browse",command=browse_source).pack(pady=5)
 tk.Label(root,text="Destination Folder:").pack(pady=(10,0))
