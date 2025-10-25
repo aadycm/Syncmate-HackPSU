@@ -140,6 +140,9 @@ sentence-transformers – AI summarization
 ##  Authors
 
 Name: Aadithya Chandramouli 
+
 Teamates : Manmeet Singh Kukreja & Umang Virmani
+
 Hackathon: HackPSU 2025  
+
 Project: SyncMate — File Synchronization Tool  
