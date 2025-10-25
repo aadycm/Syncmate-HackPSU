@@ -16,4 +16,12 @@ def analyze_sync_report(report_filename="sync_log.txt"):
 
     if not log_entries:
         print(f"**Report Analysis:** The synchronization log file ('{report_filename}') is present but contains no recorded entries.")
-        return 
+        return
+
+    totals = defaultdict(int)
+    total_sync_runs = 0
+
+    for line in log_entries:
+        if "New:" in line and "|" in line:
+            total_sync_runs += 1
+            try:
